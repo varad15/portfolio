@@ -13,7 +13,7 @@ export default function ExperienceSection() {
   const highlights = [
     {
       icon: "fas fa-robot",
-      color: "bg-blue-500/20 text-blue-400",
+      color: "bg-blue-500/20 text-black",
       text: "Led development of ML system auto-classifying/routing civic complaints to departments."
     },
     {
@@ -53,9 +53,9 @@ export default function ExperienceSection() {
           >
             <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
               <div>
-                <h3 className="text-2xl font-space font-bold text-slate-800 mb-2" data-testid="job-title">Project Lead</h3>
+                <h3 className="text-2xl font-space font-bold text-black mb-2" data-testid="job-title">Project Lead</h3>
                 <h4 className="text-xl text-indigo-600 mb-2 font-semibold" data-testid="company-name">Pune Municipal Corporation</h4>
-                <p className="text-slate-600 font-medium" data-testid="job-duration">Complaint Analysis & Categorization • 2025–Present</p>
+                <p className="text-black font-medium" data-testid="job-duration">Complaint Analysis & Categorization • 2025–Present</p>
               </div>
               <div className="mt-4 md:mt-0">
                 <div className="flex items-center gap-2 px-4 py-2 bg-green-500/20 border border-green-500/30 rounded-full" data-testid="job-status">
@@ -64,10 +64,10 @@ export default function ExperienceSection() {
                 </div>
               </div>
             </div>
-            
+
             <div className="space-y-4" data-testid="job-highlights">
               {highlights.map((highlight, index) => (
-                <motion.div 
+                <motion.div
                   key={index}
                   className="flex items-start gap-4"
                   initial={{ x: -30, opacity: 0 }}
@@ -79,19 +79,19 @@ export default function ExperienceSection() {
                   <div className={`flex-shrink-0 w-8 h-8 ${highlight.color} rounded-full flex items-center justify-center mt-1`}>
                     <i className={`${highlight.icon} text-sm`}></i>
                   </div>
-                  <p className="text-gray-300">{highlight.text}</p>
+                  <p className="text-black">{highlight.text}</p>
                 </motion.div>
               ))}
             </div>
-            
-            <motion.div 
+
+            <motion.div
               className="mt-6 pt-6 border-t border-gray-700"
               initial={{ y: 20, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.8 }}
               viewport={{ once: true }}
             >
-              <h5 className="text-sm font-semibold text-gray-400 mb-3">Technology Stack:</h5>
+              <h5 className="text-sm font-semibold text-black mb-3">Technology Stack:</h5>
               <div className="flex flex-wrap gap-2" data-testid="tech-stack">
                 {techStack.map((tech, index) => (
                   <motion.span 

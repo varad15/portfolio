@@ -25,8 +25,8 @@ export default function AboutSection() {
           >
             <div className="glass rounded-2xl p-8 hover-shine border border-white/30" data-testid="about-description">
               <p className="text-lg leading-relaxed text-slate-700 font-medium">
-                B.Tech in Computer Engineering (CGPA: 8.58), VIT Pune, Class of 2026. Passionate about ML-driven backend solutions, city-scale complaint automation, and building robust, privacy-focused web systems.
-              </p>
+B.Tech Computer Engineering (CGPA: 8.58) | VIT Pune, 2026
+Aspiring backend engineer with a strong foundation in algorithms, distributed systems, and system design. Passionate about architecting scalable web applications, integrating ML pipelines into production backends, and building privacy-first platforms for real-world impact.              </p>
             </div>
             
             {/* Education */}

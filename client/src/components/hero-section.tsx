@@ -67,13 +67,12 @@ export default function HeroSection() {
           >
             <div className="w-40 h-40 mx-auto rounded-full glass p-1 shadow-2xl border-2 border-white/20">
               <img 
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400" 
+                src="/images/profile.jpg"
                 alt="Varad Babasaheb Jumbad - Professional Portrait" 
                 className="w-full h-full rounded-full object-cover"
                 data-testid="profile-image"
               />
               {/* Animated border glow effect */}
-              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 opacity-75 blur-sm animate-pulse"></div>
             </div>
           </motion.div>
           
@@ -84,16 +83,26 @@ export default function HeroSection() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <h1 className="text-5xl md:text-7xl font-space font-bold gradient-text drop-shadow-sm" data-testid="hero-name">
-              Varad Babasaheb Jumbad
-            </h1>
-            <p className="text-xl md:text-2xl text-slate-700 font-medium" data-testid="hero-tagline">
+         <h1
+           className="text-5xl md:text-7xl font-space font-bold drop-shadow-sm text-black"
+           data-testid="hero-name"
+         >
+           Varad Babasaheb Jumbad
+         </h1>
+
+            <p
+              className="text-xl md:text-2xl text-black font-medium"
+              data-testid="hero-tagline"
+            >
               Backend Developer & ML Enthusiast | VIT Pune
             </p>
-            
+
             {/* Animated Role Typewriter */}
             <div className="h-12 flex items-center justify-center">
-              <span className="text-lg md:text-xl text-indigo-600 font-jetbrains font-semibold" data-testid="typewriter-text">
+              <span
+                className="text-lg md:text-xl text-black font-jetbrains font-semibold"
+                data-testid="typewriter-text"
+              >
                 <motion.span
                   key={currentRoleIndex}
                   initial={{ opacity: 0, y: 20 }}
@@ -107,7 +116,7 @@ export default function HeroSection() {
               </span>
             </div>
           </motion.div>
-          
+
           {/* Contact Info */}
           <motion.div 
             className="flex flex-wrap items-center justify-center gap-6 text-slate-600"

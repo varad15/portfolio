@@ -6,7 +6,7 @@ export default function ProjectsSection() {
       title: "GrievanceGrid",
       subtitle: "Full-Stack Smart Municipal Dashboard",
       description: "City portal with geo-logging, dashboards, multilingual complaint classification, JWT-based roles, analytics, and in-progress RAG chatbot/live support.",
-      image: "/images/grievancegrid.jpg",
+      image: "/images/grievancegrid.jpg.png",
       imageAlt: "Abstract geometric pattern representing data dashboard",
       tech: [
         { name: "Python", color: "bg-blue-500/20 border-blue-500/30" },
@@ -22,7 +22,7 @@ export default function ProjectsSection() {
       title: "FireSentinel",
       subtitle: "YOLOv8 Wildfire Early Warning System",
       description: "Real-time fire/smoke detection in surveillance video with OpenCV pipeline achieving 90%+ model accuracy. Published in IEEE Xplore (ICDICI 2024).",
-      image: "/images/firesentinel.jpg",
+      image: "/images/firesentinel.jpeg",
       imageAlt: "Abstract geometric pattern representing AI and machine learning",
       tech: [
         { name: "Python", color: "bg-blue-500/20 border-blue-500/30" },
@@ -38,7 +38,7 @@ export default function ProjectsSection() {
       title: "FinVault",
       subtitle: "Secure Online Banking Simulator",
       description: "Role-based online banking platform with JWT authentication, dynamic fund transfers, comprehensive transaction history, and admin oversight capabilities.",
-      image: "/images/finvault.jpg",
+      image: "/images/finvault.jpeg",
       imageAlt: "Abstract geometric pattern representing secure financial systems",
       tech: [
         { name: "Java", color: "bg-orange-500/20 border-orange-500/30" },
@@ -127,7 +127,7 @@ export default function ProjectsSection() {
                 
                 <div className="pt-4">
                   <a 
-                    href="https://github.com" 
+                    href="https://github.com/varad15"
                     target="_blank" 
                     rel="noopener noreferrer"
                     className={`inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r ${project.gradient} text-white rounded-lg font-medium transition-all duration-300 hover:scale-105 shadow-lg`}

@@ -1,21 +1,6 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-import { useToast } from "@/hooks/use-toast";
 
 export default function ContactSection() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: ""
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const { toast } = useToast();
-
   const contactMethods = [
     {
       title: "Email",
@@ -43,156 +28,57 @@ export default function ContactSection() {
     }
   ];
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    toast({
-      title: "Message sent successfully!",
-      description: "Thank you for your message. I'll get back to you soon.",
-    });
-    
-    setFormData({ name: "", email: "", subject: "", message: "" });
-    setIsSubmitting(false);
-  };
-
   return (
     <section id="contact" className="py-20 bg-gradient-to-b from-white/50 to-slate-100/50 circuit-bg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div 
+        <motion.div
           className="text-center mb-16"
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-space font-bold gradient-text mb-4" data-testid="contact-title">Get In Touch</h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-blue-500 mx-auto rounded-full"></div>
-          <p className="text-xl text-slate-700 mt-6 font-medium" data-testid="contact-subtitle">Let's discuss opportunities and collaborations</p>
-        </motion.div>
-        
-        <div className="max-w-4xl mx-auto grid lg:grid-cols-2 gap-12">
-          {/* Contact Info */}
-          <div className="space-y-8">
-            {contactMethods.map((method, index) => (
-              <motion.div 
-                key={method.title}
-                className="glass rounded-2xl p-6 hover-shine border border-white/30"
-                initial={{ x: -50, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                whileHover={{ scale: 1.02 }}
-                viewport={{ once: true }}
-                data-testid={method.testId}
-              >
-                <div className="flex items-center gap-4">
-                  <div className={`w-12 h-12 bg-gradient-to-r ${method.gradient} rounded-xl flex items-center justify-center shadow-lg`}>
-                    <i className={`${method.icon} text-white text-lg`}></i>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-space font-semibold text-slate-800">{method.title}</h3>
-                    <a 
-                      href={method.href} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-indigo-600 hover:text-indigo-700 transition-colors font-medium"
-                      data-testid={`${method.testId}-link`}
-                    >
-                      {method.value}
-                    </a>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-          
-          {/* Contact Form */}
-          <motion.div 
-            className="glass rounded-2xl p-8 border border-white/30"
-            initial={{ x: 50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            viewport={{ once: true }}
+          <h2
+            className="text-4xl md:text-5xl font-space font-bold gradient-text mb-4"
+            data-testid="contact-title"
           >
-            <form onSubmit={handleSubmit} className="space-y-6" data-testid="contact-form">
-              <div>
-                <Label htmlFor="name" className="block text-sm font-medium text-slate-800 mb-2">Your Name</Label>
-                <Input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-3 bg-white/80 border border-slate-300 rounded-lg text-slate-800 placeholder-slate-500 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all duration-300"
-                  placeholder="Enter your name"
-                  required
-                  data-testid="input-name"
-                />
-              </div>
-              
-              <div>
-                <Label htmlFor="email" className="block text-sm font-medium text-slate-800 mb-2">Your Email</Label>
-                <Input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-3 bg-white/80 border border-slate-300 rounded-lg text-slate-800 placeholder-slate-500 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all duration-300"
-                  placeholder="Enter your email"
-                  required
-                  data-testid="input-email"
-                />
-              </div>
-              
-              <div>
-                <Label htmlFor="subject" className="block text-sm font-medium text-slate-800 mb-2">Subject</Label>
-                <Input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-3 bg-white/80 border border-slate-300 rounded-lg text-slate-800 placeholder-slate-500 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all duration-300"
-                  placeholder="What's this about?"
-                  required
-                  data-testid="input-subject"
-                />
-              </div>
-              
-              <div>
-                <Label htmlFor="message" className="block text-sm font-medium text-slate-800 mb-2">Message</Label>
-                <Textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  rows={5}
-                  className="w-full px-4 py-3 bg-white/80 border border-slate-300 rounded-lg text-slate-800 placeholder-slate-500 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all duration-300 resize-none"
-                  placeholder="Tell me about your project or opportunity..."
-                  required
-                  data-testid="textarea-message"
-                />
-              </div>
-              
-              <Button 
-                type="submit" 
-                disabled={isSubmitting}
-                className="w-full py-3 bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 text-white rounded-lg font-medium hover:from-indigo-700 hover:via-purple-700 hover:to-blue-700 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-indigo-500/25 disabled:opacity-50 disabled:cursor-not-allowed"
-                data-testid="button-submit"
+            Get In Touch
+          </h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-blue-500 mx-auto rounded-full"></div>
+          <p className="text-xl text-slate-700 mt-6 font-medium" data-testid="contact-subtitle">
+            Let's discuss opportunities and collaborations
+          </p>
+        </motion.div>
+
+        <div className="max-w-3xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {contactMethods.map((method, index) => (
+            <motion.div
+              key={method.title}
+              className="glass rounded-2xl p-8 hover-shine border border-white/30 flex flex-col items-center text-center"
+              initial={{ y: 50, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8, delay: index * 0.1 }}
+              whileHover={{ scale: 1.03 }}
+              viewport={{ once: true }}
+              data-testid={method.testId}
+            >
+              <div
+                className={`w-16 h-16 mb-4 bg-gradient-to-r ${method.gradient} rounded-xl flex items-center justify-center shadow-lg`}
               >
-                {isSubmitting ? "Sending..." : "Send Message"}
-              </Button>
-            </form>
-          </motion.div>
+                <i className={`${method.icon} text-white text-2xl`}></i>
+              </div>
+              <h3 className="text-lg font-space font-semibold text-slate-800 mb-2">{method.title}</h3>
+              <a
+                href={method.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-indigo-600 hover:text-indigo-700 transition-colors font-medium break-words"
+                data-testid={`${method.testId}-link`}
+              >
+                {method.value}
+              </a>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
