@@ -10,7 +10,12 @@ export default {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
-      colors: {
+        border: {
+DEFAULT: "var(--border)",
+foreground: "var(--border-foreground)",
+},
+
+colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
         card: {
