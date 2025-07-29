@@ -6,7 +6,7 @@ export default function ProjectsSection() {
       title: "GrievanceGrid",
       subtitle: "Full-Stack Smart Municipal Dashboard",
       description: "City portal with geo-logging, dashboards, multilingual complaint classification, JWT-based roles, analytics, and in-progress RAG chatbot/live support.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
+      image: "/images/grievancegrid.jpg",
       imageAlt: "Abstract geometric pattern representing data dashboard",
       tech: [
         { name: "Python", color: "bg-blue-500/20 border-blue-500/30" },
@@ -22,7 +22,7 @@ export default function ProjectsSection() {
       title: "FireSentinel",
       subtitle: "YOLOv8 Wildfire Early Warning System",
       description: "Real-time fire/smoke detection in surveillance video with OpenCV pipeline achieving 90%+ model accuracy. Published in IEEE Xplore (ICDICI 2024).",
-      image: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
+      image: "/images/firesentinel.jpg",
       imageAlt: "Abstract geometric pattern representing AI and machine learning",
       tech: [
         { name: "Python", color: "bg-blue-500/20 border-blue-500/30" },
@@ -38,7 +38,7 @@ export default function ProjectsSection() {
       title: "FinVault",
       subtitle: "Secure Online Banking Simulator",
       description: "Role-based online banking platform with JWT authentication, dynamic fund transfers, comprehensive transaction history, and admin oversight capabilities.",
-      image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
+      image: "/images/finvault.jpg",
       imageAlt: "Abstract geometric pattern representing secure financial systems",
       tech: [
         { name: "Java", color: "bg-orange-500/20 border-orange-500/30" },

@@ -55,7 +55,7 @@ export default function AboutSection() {
             viewport={{ once: true }}
           >
             <img 
-              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
+              src="/images/workspace.jpg" 
               alt="Modern developer workspace with multiple monitors" 
               className="rounded-2xl shadow-2xl"
               data-testid="workspace-image"
