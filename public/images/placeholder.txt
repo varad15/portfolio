@@ -1,0 +1,10 @@
+Add your custom images here:
+
+Required images:
+- profile.jpg (400x400px) - Your professional headshot
+- workspace.jpg (800x600px) - Your workspace/coding setup
+- grievancegrid.jpg (800x400px) - GrievanceGrid project screenshot  
+- firesentinel.jpg (800x400px) - FireSentinel project screenshot
+- finvault.jpg (800x400px) - FinVault project screenshot
+
+Images should be in JPG or PNG format.
