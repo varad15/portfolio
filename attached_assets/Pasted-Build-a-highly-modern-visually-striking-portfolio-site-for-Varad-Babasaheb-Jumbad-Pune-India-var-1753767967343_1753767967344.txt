@@ -1,0 +1,131 @@
+Build a highly modern, visually striking portfolio site for Varad Babasaheb Jumbad (Pune, India; varadjumbad15@gmail.com; LinkedIn), Computer Engineering student at Vishwakarma Institute of Technology, Pune. The site should:
+
+Be built using Next.js, Tailwind CSS, and Framer Motion for silky-smooth animations and transitions.
+
+Use advanced, highly aesthetic Google Fonts (such as "Inter", "JetBrains Mono", or "Space Grotesk" for headings, and "Manrope" or "Fira Sans" for body).
+
+Use a modern "techy" UI vibe: glassmorphism panels, crisp shadowing, accent gradients in blues/purples, soft transitions, and animated section reveals. Dark mode required.
+
+Responsive/mobile-first with accessible color schemes and font contrast.
+
+Feature micro-interactions: animated hover/focus on buttons, project cards, social links, and navigation elements.
+
+Deployable instantly on Vercel or Netlify, static only (no backend).
+
+Content Requirements—Include all points below:
+
+Hero Section
+Name: Varad Babasaheb Jumbad
+
+Phone: +91 7798735903
+
+Location: Pune, India
+
+Brief tagline: "Backend Developer & ML Enthusiast | VIT Pune"
+
+Animated role/typewriter effect cycling: "Backend Developer", "Machine Learning Practitioner", "Project Leader", "Team Player"
+
+Elegant Contact Button (scrolls to contact)
+
+Profile photo with glassmorphic ring/frame
+
+About/Education
+One-paragraph introduction (summarize):
+"B.Tech in Computer Engineering (CGPA: 8.58), VIT Pune, Class of 2026. Passionate about ML-driven backend solutions, city-scale complaint automation, and building robust, privacy-focused web systems."
+
+Display education line with logo/icon for college (VIT Pune).
+
+Skills
+Headline: "Technical & Soft Skills" (use technology badges or chips with light-glow hover)
+
+Languages: Java, Python (basics), SQL, JavaScript
+
+Frameworks/Tools: Spring Boot, FastAPI, Streamlit
+
+Databases: PostgreSQL, MySQL
+
+Core Concepts: DSA, OOP, DBMS, OS, REST APIs
+
+Soft Skills: Team Collaboration, Communication, Ownership, Time Management
+
+Work Experience
+Pune Municipal Corporation – Complaint Analysis & Categorization (2025–Present)
+
+Role: Project Lead
+
+Bulleted highlights (with icons):
+
+Led dev of ML system auto-classifying/routing civic complaints to departments.
+
+Integrated with PostgreSQL & enforced data security/NDA compliance.
+
+Developed multilingual models (Marathi/Hindi/English) with scikit-learn.
+
+Stack: Python, FastAPI, PostgreSQL, Scikit-learn, Logistic Regression, MultiLabelBinarizer
+
+Projects
+Show as interactive animated cards, each with a quick glass-shine hover effect, tech badges, and “View on GitHub” button (opens new tab):
+
+GrievanceGrid (Full-Stack Smart Municipal Dashboard)
+
+Python/FastAPI/Streamlit/PostgreSQL/Scikit-learn/JWT/REST APIs
+
+City portal with geo-logging, dashboards, multilingual complaint classification, JWT-based roles, analytics, (in progress: RAG chatbot/live support).
+
+GitHub
+
+FireSentinel (YOLOv8 Wildfire Early Warning)
+
+Python/YOLOv8/OpenCV/Numpy
+
+Real-time fire/smoke detection in surveillance video; OpenCV pipeline; 90%+ model accuracy. Published in IEEE Xplore (ICDICI 2024).
+
+GitHub
+
+FinVault (Secure Online Banking Simulator)
+
+Java/Angular/Spring Boot/MySQL/JWT/REST APIs
+
+Role-based online banking with JWT auth, dynamic fund transfers, transaction history, admin oversight.
+
+Certifications
+Shown in elegant badges/tiles with icons/logos:
+
+NVIDIA Fundamentals of Deep Learning
+
+Google Cloud Computing Foundations
+
+Kubernetes for Beginners
+
+Generative AI for Beginners
+
+Leadership & Extracurriculars
+Logistics & Function Execution Head, VIT Pune Model United Nations (2023–2024)
+
+Led a 15-member team for event operations and logistics.
+
+Contact
+Modern contact card with:
+
+Email (mailto:), LinkedIn (icon), and optionally WhatsApp (phone number, click-to-chat)
+
+All open in new tabs
+
+Footer
+“© 2025 Varad Babasaheb Jumbad”
+
+Project Structure Output:
+
+Folder layout using Next.js conventions (/pages, /components, /public).
+
+Each section as modular component.
+
+Fonts via Google Fonts import in _app.js or global.css.
+
+All colors, effects, and transitions using Tailwind, with Framer Motion for all animated reveals and transitions.
+
+Provide ready-to-use code with placeholder images/instructions.
+
+Add deployment and customizing instructions.
+
+All information must be up-to-date, accurate, and highly readable; prioritize accessibility and cutting-edge UI aesthetics. Do not use any backend, database, or third-party tracking—only static, client-side code.
