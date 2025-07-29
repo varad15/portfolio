@@ -29,7 +29,7 @@ export default function ExperienceSection() {
   ];
 
   return (
-    <section id="experience" className="py-20 bg-slate-800/50">
+    <section id="experience" className="py-20 bg-gradient-to-b from-slate-100/50 to-white/50 hex-bg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           className="text-center mb-16"
@@ -39,12 +39,12 @@ export default function ExperienceSection() {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl md:text-5xl font-space font-bold gradient-text mb-4" data-testid="experience-title">Work Experience</h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-blue-500 mx-auto rounded-full"></div>
         </motion.div>
         
         <div className="max-w-4xl mx-auto">
           <motion.div 
-            className="glass rounded-2xl p-8 hover-shine"
+            className="glass rounded-2xl p-8 hover-shine border border-white/30"
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -53,14 +53,14 @@ export default function ExperienceSection() {
           >
             <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
               <div>
-                <h3 className="text-2xl font-space font-bold text-white mb-2" data-testid="job-title">Project Lead</h3>
-                <h4 className="text-xl text-blue-400 mb-2" data-testid="company-name">Pune Municipal Corporation</h4>
-                <p className="text-gray-400" data-testid="job-duration">Complaint Analysis & Categorization • 2025–Present</p>
+                <h3 className="text-2xl font-space font-bold text-slate-800 mb-2" data-testid="job-title">Project Lead</h3>
+                <h4 className="text-xl text-indigo-600 mb-2 font-semibold" data-testid="company-name">Pune Municipal Corporation</h4>
+                <p className="text-slate-600 font-medium" data-testid="job-duration">Complaint Analysis & Categorization • 2025–Present</p>
               </div>
               <div className="mt-4 md:mt-0">
                 <div className="flex items-center gap-2 px-4 py-2 bg-green-500/20 border border-green-500/30 rounded-full" data-testid="job-status">
-                  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                  <span className="text-green-400 text-sm">Currently Active</span>
+                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                  <span className="text-green-600 text-sm font-medium">Currently Active</span>
                 </div>
               </div>
             </div>

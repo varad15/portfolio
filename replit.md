@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project is a modern, visually striking portfolio website for Varad Babasaheb Jumbad, a Computer Engineering student from VIT Pune. The application showcases his skills, projects, and experience through an interactive, animated interface built with cutting-edge web technologies.
+This project is a modern, visually striking portfolio website for Varad Babasaheb Jumbad, a Computer Engineering student from VIT Pune. The application showcases his skills, projects, and experience through an interactive, animated interface built with cutting-edge web technologies. The site features a light theme with classy but techy backgrounds, glassmorphism effects, smooth animations, and comprehensive provisions for customizable profile photos and project images.
 
 ## User Preferences
 

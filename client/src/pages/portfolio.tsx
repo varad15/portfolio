@@ -11,7 +11,7 @@ import Footer from "@/components/footer";
 
 export default function Portfolio() {
   return (
-    <div className="min-h-screen bg-slate-900 text-white overflow-x-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 text-slate-900 overflow-x-hidden">
       <Navigation />
       <HeroSection />
       <AboutSection />

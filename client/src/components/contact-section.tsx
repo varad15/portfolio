@@ -65,7 +65,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-slate-800/50">
+    <section id="contact" className="py-20 bg-gradient-to-b from-white/50 to-slate-100/50 circuit-bg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           className="text-center mb-16"
@@ -75,8 +75,8 @@ export default function ContactSection() {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl md:text-5xl font-space font-bold gradient-text mb-4" data-testid="contact-title">Get In Touch</h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto"></div>
-          <p className="text-xl text-gray-300 mt-6" data-testid="contact-subtitle">Let's discuss opportunities and collaborations</p>
+          <div className="w-24 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-blue-500 mx-auto rounded-full"></div>
+          <p className="text-xl text-slate-700 mt-6 font-medium" data-testid="contact-subtitle">Let's discuss opportunities and collaborations</p>
         </motion.div>
         
         <div className="max-w-4xl mx-auto grid lg:grid-cols-2 gap-12">
@@ -85,7 +85,7 @@ export default function ContactSection() {
             {contactMethods.map((method, index) => (
               <motion.div 
                 key={method.title}
-                className="glass rounded-2xl p-6 hover-shine"
+                className="glass rounded-2xl p-6 hover-shine border border-white/30"
                 initial={{ x: -50, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -94,16 +94,16 @@ export default function ContactSection() {
                 data-testid={method.testId}
               >
                 <div className="flex items-center gap-4">
-                  <div className={`w-12 h-12 bg-gradient-to-r ${method.gradient} rounded-xl flex items-center justify-center`}>
+                  <div className={`w-12 h-12 bg-gradient-to-r ${method.gradient} rounded-xl flex items-center justify-center shadow-lg`}>
                     <i className={`${method.icon} text-white text-lg`}></i>
                   </div>
                   <div>
-                    <h3 className="text-lg font-space font-semibold text-white">{method.title}</h3>
+                    <h3 className="text-lg font-space font-semibold text-slate-800">{method.title}</h3>
                     <a 
                       href={method.href} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="text-blue-400 hover:text-blue-300 transition-colors"
+                      className="text-indigo-600 hover:text-indigo-700 transition-colors font-medium"
                       data-testid={`${method.testId}-link`}
                     >
                       {method.value}
@@ -116,7 +116,7 @@ export default function ContactSection() {
           
           {/* Contact Form */}
           <motion.div 
-            className="glass rounded-2xl p-8"
+            className="glass rounded-2xl p-8 border border-white/30"
             initial={{ x: 50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -124,14 +124,14 @@ export default function ContactSection() {
           >
             <form onSubmit={handleSubmit} className="space-y-6" data-testid="contact-form">
               <div>
-                <Label htmlFor="name" className="block text-sm font-medium text-white mb-2">Your Name</Label>
+                <Label htmlFor="name" className="block text-sm font-medium text-slate-800 mb-2">Your Name</Label>
                 <Input
                   type="text"
                   id="name"
                   name="name"
                   value={formData.name}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all duration-300"
+                  className="w-full px-4 py-3 bg-white/80 border border-slate-300 rounded-lg text-slate-800 placeholder-slate-500 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all duration-300"
                   placeholder="Enter your name"
                   required
                   data-testid="input-name"
@@ -139,14 +139,14 @@ export default function ContactSection() {
               </div>
               
               <div>
-                <Label htmlFor="email" className="block text-sm font-medium text-white mb-2">Your Email</Label>
+                <Label htmlFor="email" className="block text-sm font-medium text-slate-800 mb-2">Your Email</Label>
                 <Input
                   type="email"
                   id="email"
                   name="email"
                   value={formData.email}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all duration-300"
+                  className="w-full px-4 py-3 bg-white/80 border border-slate-300 rounded-lg text-slate-800 placeholder-slate-500 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all duration-300"
                   placeholder="Enter your email"
                   required
                   data-testid="input-email"
@@ -154,14 +154,14 @@ export default function ContactSection() {
               </div>
               
               <div>
-                <Label htmlFor="subject" className="block text-sm font-medium text-white mb-2">Subject</Label>
+                <Label htmlFor="subject" className="block text-sm font-medium text-slate-800 mb-2">Subject</Label>
                 <Input
                   type="text"
                   id="subject"
                   name="subject"
                   value={formData.subject}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all duration-300"
+                  className="w-full px-4 py-3 bg-white/80 border border-slate-300 rounded-lg text-slate-800 placeholder-slate-500 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all duration-300"
                   placeholder="What's this about?"
                   required
                   data-testid="input-subject"
@@ -169,14 +169,14 @@ export default function ContactSection() {
               </div>
               
               <div>
-                <Label htmlFor="message" className="block text-sm font-medium text-white mb-2">Message</Label>
+                <Label htmlFor="message" className="block text-sm font-medium text-slate-800 mb-2">Message</Label>
                 <Textarea
                   id="message"
                   name="message"
                   value={formData.message}
                   onChange={handleInputChange}
                   rows={5}
-                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all duration-300 resize-none"
+                  className="w-full px-4 py-3 bg-white/80 border border-slate-300 rounded-lg text-slate-800 placeholder-slate-500 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all duration-300 resize-none"
                   placeholder="Tell me about your project or opportunity..."
                   required
                   data-testid="textarea-message"
@@ -186,7 +186,7 @@ export default function ContactSection() {
               <Button 
                 type="submit" 
                 disabled={isSubmitting}
-                className="w-full py-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full py-3 bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 text-white rounded-lg font-medium hover:from-indigo-700 hover:via-purple-700 hover:to-blue-700 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-indigo-500/25 disabled:opacity-50 disabled:cursor-not-allowed"
                 data-testid="button-submit"
               >
                 {isSubmitting ? "Sending..." : "Send Message"}

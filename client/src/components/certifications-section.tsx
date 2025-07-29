@@ -29,7 +29,7 @@ export default function CertificationsSection() {
   ];
 
   return (
-    <section id="certifications" className="py-20 bg-slate-800/50">
+    <section id="certifications" className="py-20 bg-gradient-to-b from-white/50 to-slate-100/50 circuit-bg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           className="text-center mb-16"
@@ -39,14 +39,14 @@ export default function CertificationsSection() {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl md:text-5xl font-space font-bold gradient-text mb-4" data-testid="certifications-title">Certifications</h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-blue-500 mx-auto rounded-full"></div>
         </motion.div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {certifications.map((cert, index) => (
             <motion.div 
               key={cert.title}
-              className="glass rounded-2xl p-6 hover-shine text-center group cursor-pointer"
+              className="glass rounded-2xl p-6 hover-shine text-center group cursor-pointer border border-white/30"
               initial={{ y: 50, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -55,15 +55,15 @@ export default function CertificationsSection() {
               data-testid={`certification-${cert.title.toLowerCase().replace(/\s+/g, '-')}`}
             >
               <motion.div 
-                className={`w-16 h-16 bg-gradient-to-r ${cert.gradient} rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform`}
+                className={`w-16 h-16 bg-gradient-to-r ${cert.gradient} rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform shadow-lg`}
                 whileHover={{ rotate: 5 }}
               >
                 <i className={`${cert.icon} text-2xl text-white`}></i>
               </motion.div>
-              <h3 className="text-lg font-space font-semibold text-white mb-2" data-testid={`cert-title-${cert.title.toLowerCase().replace(/\s+/g, '-')}`}>
+              <h3 className="text-lg font-space font-semibold text-slate-800 mb-2" data-testid={`cert-title-${cert.title.toLowerCase().replace(/\s+/g, '-')}`}>
                 {cert.title}
               </h3>
-              <p className="text-gray-400 text-sm" data-testid={`cert-subtitle-${cert.title.toLowerCase().replace(/\s+/g, '-')}`}>
+              <p className="text-slate-600 text-sm font-medium" data-testid={`cert-subtitle-${cert.title.toLowerCase().replace(/\s+/g, '-')}`}>
                 {cert.subtitle}
               </p>
             </motion.div>

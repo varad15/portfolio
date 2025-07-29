@@ -46,7 +46,7 @@ export default function SkillsSection() {
   ];
 
   return (
-    <section id="skills" className="py-20">
+    <section id="skills" className="py-20 bg-gradient-to-b from-slate-100/50 to-white/50 circuit-bg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           className="text-center mb-16"
@@ -56,14 +56,14 @@ export default function SkillsSection() {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl md:text-5xl font-space font-bold gradient-text mb-4" data-testid="skills-title">Technical & Soft Skills</h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-blue-500 mx-auto rounded-full"></div>
         </motion.div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {skillCategories.map((category, categoryIndex) => (
             <motion.div 
               key={category.title}
-              className="glass rounded-2xl p-6 space-y-4"
+              className="glass rounded-2xl p-6 space-y-4 border border-white/30"
               initial={{ y: 50, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: categoryIndex * 0.1 }}
@@ -71,14 +71,14 @@ export default function SkillsSection() {
               data-testid={`skill-category-${category.title.toLowerCase().replace(/\s+/g, '-')}`}
             >
               <div className="flex items-center gap-3 mb-4">
-                <i className={`${category.icon} text-2xl ${category.color}`}></i>
-                <h3 className="text-xl font-space font-semibold">{category.title}</h3>
+                <i className={`${category.icon} text-2xl ${category.color.replace('text-', 'text-').replace('-400', '-600')}`}></i>
+                <h3 className="text-xl font-space font-semibold text-slate-800">{category.title}</h3>
               </div>
               <div className="space-y-3">
                 {category.skills.map((skill, skillIndex) => (
                   <motion.span 
                     key={skill.name}
-                    className={`skill-badge inline-block px-4 py-2 bg-gradient-to-r ${skill.color} rounded-full text-sm ${category.title === 'Languages' || category.title === 'Frameworks' ? 'font-jetbrains' : ''}`}
+                    className={`skill-badge inline-block px-4 py-2 bg-gradient-to-r ${skill.color} rounded-full text-sm text-slate-700 font-medium ${category.title === 'Languages' || category.title === 'Frameworks' ? 'font-jetbrains' : ''}`}
                     initial={{ scale: 0, opacity: 0 }}
                     whileInView={{ scale: 1, opacity: 1 }}
                     transition={{ duration: 0.5, delay: (categoryIndex * 0.1) + (skillIndex * 0.05) }}

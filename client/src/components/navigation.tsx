@@ -23,7 +23,7 @@ export default function Navigation() {
 
   return (
     <motion.nav 
-      className="fixed top-0 w-full z-50 glass-dark"
+      className="fixed top-0 w-full z-50 glass-nav"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6 }}
@@ -41,7 +41,7 @@ export default function Navigation() {
                 <button
                   key={item.href}
                   onClick={() => scrollToSection(item.href)}
-                  className="nav-link text-gray-300 hover:text-white px-3 py-2 text-sm font-medium"
+                  className="nav-link px-3 py-2 text-sm font-medium"
                   data-testid={`nav-link-${item.label.toLowerCase()}`}
                 >
                   {item.label}
@@ -53,7 +53,7 @@ export default function Navigation() {
           {/* Mobile Menu Button */}
           <div className="md:hidden">
             <button 
-              className="text-gray-300 hover:text-white"
+              className="text-slate-600 hover:text-indigo-600"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               data-testid="mobile-menu-button"
             >
@@ -66,7 +66,7 @@ export default function Navigation() {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <motion.div 
-          className="md:hidden glass-dark border-t border-gray-700"
+          className="md:hidden glass border-t border-slate-200"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
@@ -76,7 +76,7 @@ export default function Navigation() {
               <button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
-                className="text-gray-300 hover:text-white block px-3 py-2 text-base font-medium w-full text-left"
+                className="text-slate-600 hover:text-indigo-600 block px-3 py-2 text-base font-medium w-full text-left"
                 data-testid={`mobile-nav-link-${item.label.toLowerCase()}`}
               >
                 {item.label}

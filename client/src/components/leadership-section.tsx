@@ -9,7 +9,7 @@ export default function LeadershipSection() {
   ];
 
   return (
-    <section id="leadership" className="py-20">
+    <section id="leadership" className="py-20 bg-gradient-to-b from-slate-100/50 to-white/50 hex-bg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           className="text-center mb-16"
@@ -19,12 +19,12 @@ export default function LeadershipSection() {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl md:text-5xl font-space font-bold gradient-text mb-4" data-testid="leadership-title">Leadership & Extracurriculars</h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-blue-500 mx-auto rounded-full"></div>
         </motion.div>
         
         <div className="max-w-4xl mx-auto">
           <motion.div 
-            className="glass rounded-2xl p-8 hover-shine"
+            className="glass rounded-2xl p-8 hover-shine border border-white/30"
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -38,18 +38,18 @@ export default function LeadershipSection() {
               transition={{ duration: 0.8, delay: 0.4 }}
               viewport={{ once: true }}
             >
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center shadow-lg">
                 <i className="fas fa-globe text-2xl text-white"></i>
               </div>
               <div>
-                <h3 className="text-2xl font-space font-bold text-white" data-testid="leadership-position">Logistics & Function Execution Head</h3>
-                <p className="text-blue-400 text-lg" data-testid="leadership-organization">VIT Pune Model United Nations</p>
-                <p className="text-gray-400" data-testid="leadership-duration">2023–2024</p>
+                <h3 className="text-2xl font-space font-bold text-slate-800" data-testid="leadership-position">Logistics & Function Execution Head</h3>
+                <p className="text-indigo-600 text-lg font-semibold" data-testid="leadership-organization">VIT Pune Model United Nations</p>
+                <p className="text-slate-600 font-medium" data-testid="leadership-duration">2023–2024</p>
               </div>
             </motion.div>
             
             <motion.p 
-              className="text-gray-300 text-lg leading-relaxed"
+              className="text-slate-700 text-lg leading-relaxed font-medium"
               initial={{ y: 20, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.6 }}
@@ -70,7 +70,7 @@ export default function LeadershipSection() {
               {skills.map((skill, index) => (
                 <motion.span 
                   key={skill.name}
-                  className={`px-4 py-2 ${skill.color} rounded-full text-sm`}
+                  className={`px-4 py-2 ${skill.color} rounded-full text-sm text-slate-700 font-medium border`}
                   initial={{ scale: 0, opacity: 0 }}
                   whileInView={{ scale: 1, opacity: 1 }}
                   transition={{ duration: 0.4, delay: 0.9 + (index * 0.1) }}

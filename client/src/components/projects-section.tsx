@@ -53,8 +53,18 @@ export default function ProjectsSection() {
   ];
 
   return (
-    <section id="projects" className="py-20">
+    <section id="projects" className="py-20 bg-gradient-to-b from-white/50 to-slate-100/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* 
+          CUSTOMIZABLE PROJECT IMAGES
+          ==========================
+          To add your own project images:
+          1. Add your images to: public/images/
+          2. Recommended size: 600x400 pixels (landscape)
+          3. Use clear screenshots or mockups of your projects
+          4. Update the image paths in the projects array above
+          5. Example paths: "/images/project1.jpg", "/images/project2.png"
+        */}
         <motion.div 
           className="text-center mb-16"
           initial={{ y: 50, opacity: 0 }}
@@ -63,14 +73,14 @@ export default function ProjectsSection() {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl md:text-5xl font-space font-bold gradient-text mb-4" data-testid="projects-title">Featured Projects</h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-blue-500 mx-auto rounded-full"></div>
         </motion.div>
         
         <div className="grid lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <motion.div 
               key={project.title}
-              className="project-card glass rounded-2xl p-6 hover-shine group"
+              className="project-card rounded-2xl p-6 hover-shine group border border-white/30"
               initial={{ y: 50, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
@@ -88,11 +98,11 @@ export default function ProjectsSection() {
               </div>
               
               <div className="space-y-4">
-                <h3 className={`text-2xl font-space font-bold text-white ${project.hoverColor} transition-colors`} data-testid={`project-title-${project.title.toLowerCase().replace(/\s+/g, '-')}`}>
+                <h3 className={`text-2xl font-space font-bold text-slate-800 ${project.hoverColor.replace('text-', 'text-').replace('-400', '-600')} transition-colors`} data-testid={`project-title-${project.title.toLowerCase().replace(/\s+/g, '-')}`}>
                   {project.title}
                 </h3>
-                <p className="text-gray-400" data-testid={`project-subtitle-${project.title.toLowerCase().replace(/\s+/g, '-')}`}>{project.subtitle}</p>
-                <p className="text-gray-300 leading-relaxed" data-testid={`project-description-${project.title.toLowerCase().replace(/\s+/g, '-')}`}>
+                <p className="text-slate-600 font-medium" data-testid={`project-subtitle-${project.title.toLowerCase().replace(/\s+/g, '-')}`}>{project.subtitle}</p>
+                <p className="text-slate-700 leading-relaxed font-medium" data-testid={`project-description-${project.title.toLowerCase().replace(/\s+/g, '-')}`}>
                   {project.description}
                 </p>
                 
@@ -100,7 +110,7 @@ export default function ProjectsSection() {
                   {project.tech.map((tech) => (
                     <span 
                       key={tech.name}
-                      className={`px-2 py-1 ${tech.color} rounded text-xs font-jetbrains`}
+                      className={`px-2 py-1 ${tech.color} rounded text-xs font-jetbrains text-slate-700 font-medium border`}
                       data-testid={`tech-${tech.name.toLowerCase().replace(/\s+/g, '-')}`}
                     >
                       {tech.name}
@@ -109,7 +119,7 @@ export default function ProjectsSection() {
                 </div>
                 
                 {project.award && (
-                  <div className="flex items-center gap-2 text-sm text-green-400" data-testid="project-award">
+                  <div className="flex items-center gap-2 text-sm text-emerald-600 font-medium" data-testid="project-award">
                     <i className="fas fa-award"></i>
                     <span>Published in IEEE Xplore</span>
                   </div>
@@ -120,7 +130,7 @@ export default function ProjectsSection() {
                     href="https://github.com" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className={`inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r ${project.gradient} rounded-lg font-medium transition-all duration-300 hover:scale-105`}
+                    className={`inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r ${project.gradient} text-white rounded-lg font-medium transition-all duration-300 hover:scale-105 shadow-lg`}
                     data-testid={`project-github-${project.title.toLowerCase().replace(/\s+/g, '-')}`}
                   >
                     <i className="fab fa-github"></i>
